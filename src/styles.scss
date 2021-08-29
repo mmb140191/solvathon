@@ -1,0 +1,48 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap');
+.app {
+    position: absolute;
+    top: 148px;
+    left: 33px;
+    width: 300px;
+    height: 364px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    cursor: pointer;
+}
+
+.phone-app {
+    @extend .app;
+    top: 56px;
+    left: 27px;
+    height: auto;
+    width: 346px;
+    padding: 0;
+}
+
+.next-button {
+    width: 30px;
+    height: 30px;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.around {
+        justify-content: space-around;
+    }
+
+    &.between {
+        justify-content: space-between;
+    }
+}

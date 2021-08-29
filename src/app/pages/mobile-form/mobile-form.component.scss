@@ -1,0 +1,76 @@
+div {
+    color: black;
+}
+
+.header {
+    background-color: green;
+    color: white;
+    width: 100%;
+}
+.error {
+    color: red;
+    font-size: 12px;
+    padding: 0px 10px;
+}
+
+.btn {
+    height: 50px;
+    background-color: green;
+    color: white;
+    width: 100%;
+    border: none;
+    margin-top: 30px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+}
+
+.disclaimer {
+    padding: 10px;
+    color: grey;
+    font-size: 10px;
+
+    span {
+        color: green;
+    }
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    label {
+        font-weight: bold;
+        padding-bottom: 10px;
+    }
+    input[rep=mini] {
+        width: 150px;
+    }
+    input {
+        height: 30px;
+        border: none;
+        text-align: center;
+        border-bottom: 1px solid green;
+    }
+}
+
+.loader {
+    border: 2px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 2px solid green;
+    width: 20px;
+    height: 20px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+    margin-left: 45%;
+}
+
+  /* Safari */
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

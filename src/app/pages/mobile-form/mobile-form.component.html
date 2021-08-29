@@ -1,0 +1,49 @@
+<div class="apple-watch">
+    <img style="width: 100%" src="../assets/images/iphone.png" />
+  </div>
+<div class="phone-app animate__animated animate__fadeIn">
+    <div class="header">
+        <p>Registration</p>
+    </div>
+    <div>
+        <img style="width: 80px;" src="../../../assets/images/moneybank.gif" />
+        <h3 style="padding: 0; margin: 0;">Mobile Bank</h3>
+    </div>
+    <div class="form-body">
+        <h4>Register your watch for payment</h4>
+        <div class="flex-container">
+            <div class="form-control">
+                <label>Card Number</label>
+                <input type="text" maxlength="16" [(ngModel)]="model.cardNo" placeholder="XXXX XXXX XXXX XXXX" />
+            </div>
+        </div>
+        <div class="flex-container around">
+            <div class="form-control">
+                <label>Expiry month</label>
+                <input rep="mini" [(ngModel)]="model.expiryMonth" type="text" placeholder="1" maxlength="2" />
+            </div>
+            <div class="form-control">
+                <label>Expiry year</label>
+                <input rep="mini" [(ngModel)]="model.expiryYear" type="password" placeholder="21" maxlength="2"/>
+            </div>
+        </div>
+        <div class="flex-container around">
+            <div class="form-control">
+                <label>CVV</label>
+                <input rep="mini" [(ngModel)]="model.cardCvv" type="password" placeholder="XXX" maxlength="3"/>
+            </div>
+            <div class="form-control">
+                <label>Mobile number</label>
+                <input rep="mini" [(ngModel)]="model.mobileNo" type="text" placeholder="123456789" />
+            </div>
+        </div>
+        <p class="error" *ngIf="error">{{error}}</p>
+        <div class="flex-container">
+            <button (click)="sendToken()" *ngIf="!loading" class="btn">VERIFY</button>
+            <button *ngIf="loading" class="btn" style="text-align: center"><div class="loader"></div></button>
+        </div>
+    </div>
+    <p class="disclaimer">By continuing, you agree to add this payment method to your payment accounts. You have read and understood the 
+    <span class="highlight">Terms and conditions</span> of the bank.</p>&nbsp;
+    <p class="disclaimer">If you are in EU region, your data will be abided as per GDPR rules.</p>
+</div>

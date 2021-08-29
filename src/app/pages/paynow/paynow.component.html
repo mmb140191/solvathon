@@ -1,0 +1,11 @@
+<div class="apple-watch">
+    <img style="width: 100%" src="../assets/images/apple-watch.png" />
+  </div>
+<div (click)="postPayment()" class="app" *ngIf="!error">
+    <img class="animate__animated animate__infinite animate__bounceIn" src="../../../assets/images/nfc.png" />
+    <p class="animate__animated animate__fadeIn" *ngIf="!paying">Hold near card reader</p>
+    <p class="animate__animated animate__fadeIn" *ngIf="paying">Authorising Payment...</p>
+</div>
+<div *ngIf="error" class="app" (click)="retryPayment()">
+  <p class="error animate__animated animate__fadeIn">{{error}}</p>
+</div>
